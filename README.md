@@ -1,0 +1,2 @@
+# github_repositories_app
+FlutterでGithubのリポジトリ検索アプリを作る
