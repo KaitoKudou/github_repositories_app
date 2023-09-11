@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:github_repositories_search_app/ui/repository_details_page.dart';
 
 class TopPage extends ConsumerStatefulWidget {
   const TopPage({super.key});
@@ -45,9 +46,7 @@ class _TopPageState extends ConsumerState<TopPage> {
                 ),
               ),
             ),
-
             const SizedBox(height: 24),
-
             Expanded(
               child: ListView.separated(
                 padding: const EdgeInsets.only(left: 16),
@@ -57,6 +56,13 @@ class _TopPageState extends ConsumerState<TopPage> {
                     onTap: () {
                       // TODO: 詳細画面に遷移
                       print('${index}');
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return RepositoryDetailsPage();
+                          },
+                        ),
+                      );
                     },
                     child: Container(
                       alignment: Alignment.centerLeft,
@@ -76,7 +82,6 @@ class _TopPageState extends ConsumerState<TopPage> {
                     height: 8.0,
                   );
                 },
-
               ),
             )
           ],
