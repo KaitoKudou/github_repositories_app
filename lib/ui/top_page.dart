@@ -80,7 +80,7 @@ class _TopPageState extends ConsumerState<TopPage> {
                             Navigator.of(context).push(
                               MaterialPageRoute(
                                 builder: (context) {
-                                  return RepositoryDetailsPage();
+                                  return RepositoryDetailsPage(repository: data[index]);
                                 },
                               ),
                             );
